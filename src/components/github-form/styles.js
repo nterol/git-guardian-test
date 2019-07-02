@@ -42,9 +42,14 @@ export const ErrorButton = styled.button`
   padding: 8px;
 `;
 
-export const Error = styled.div`
-  background-color: #ff3860;
+export const Info = styled.div`
+  background-color: #23d160;
   padding: 16px;
   color: #fff;
   border-radius: 4px;
+  margin-bottom: 16px;
+`;
+
+export const Error = styled(Info)`
+  background-color: #ff3860;
 `;

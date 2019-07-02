@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 
 import connect from "./connect";
 
-import { H1, AuthInput, Error, Button, Row, ErrorButton } from "./styles";
+import { H1, AuthInput, Error, Button, Row, ErrorButton, Info } from "./styles";
 
 import { Col } from "../profile/styles";
 
@@ -38,6 +38,32 @@ function RawGithubForm(props) {
           Voir mon profil
         </Button>
       </Row>
+      {!value.length ? (
+        <Info>
+          Pour voir votre profil, veuillez créer un token via l'interface Github
+          <br />
+          Assurez vous d'autoriser les champs suivants au minimum:
+          <blockquote>
+            <ul>
+              {[
+                "user",
+                "public_repo",
+                "repo",
+                "repo_deployment",
+                "repo:status",
+                "read:org",
+                "read:repo_hook",
+                "read:public_key",
+                "read:gpg_key"
+              ].map(auth => (
+                <li>{auth}</li>
+              ))}
+            </ul>
+          </blockquote>
+        </Info>
+      ) : (
+        undefined
+      )}
       {props.error || tokenError ? (
         <Error>
           Votre token est incorrect
