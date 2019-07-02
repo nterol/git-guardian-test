@@ -3,9 +3,8 @@ import { Redirect } from "react-router-dom";
 
 import connect from "./connect";
 
-import { H1, AuthInput, Error, Button, Row, ErrorButton, Info } from "./styles";
-
-import { Col } from "../profile/styles";
+import { H1, AuthInput, Error, Button, ErrorButton, Info } from "./styles";
+import { Col, Row } from "../layout-styles";
 
 function RawGithubForm(props) {
   const [redirect, setRedirect] = useState(false);

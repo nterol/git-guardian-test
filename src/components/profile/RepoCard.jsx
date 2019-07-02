@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, RepoContainer } from "./styles";
-import { Row } from "../github-form/styles";
+import { Row } from "../layout-styles";
 
 const RepoCard = ({ repo }) => {
   const orderedRepo = repo.sort(

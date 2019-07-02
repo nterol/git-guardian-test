@@ -4,12 +4,6 @@ export const H1 = styled.h1`
   margin-bottom: 24px;
 `;
 
-export const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 24px;
-`;
-
 export const Button = styled.button`
   margin-left: 16px;
   padding: 8px 16px;

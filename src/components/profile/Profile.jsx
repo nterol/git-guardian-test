@@ -3,7 +3,8 @@ import { Redirect } from "react-router-dom";
 
 import UserCard from "./UserCard";
 import RepoCard from "./RepoCard";
-import { ProfilePage, Col } from "./styles";
+import { ProfilePage } from "./styles";
+import { Col } from "../layout-styles";
 import { UserPlaceholder } from "./placeholder";
 
 import connector from "./connect";

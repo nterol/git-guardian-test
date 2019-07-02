@@ -1,30 +1,12 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
-import styled from "styled-components";
 
 import GithubForm from "./github-form/GithubForm";
 import Profile from "./profile/Profile";
+import { Page } from "./layout-styles";
 
 import useRouter from "./utils/useRouter";
-import device from "./utils/device";
-
-const Page = styled.div`
-  background: #f4ece2;
-  margin-top: 10%;
-  @media ${device.laptop} {
-    padding: 24px 8px;
-  }
-
-  @media ${device.mobileS} {
-    /* margin-top: 30%; */
-    padding: 8px;
-  }
-
-  @media ${device.mobileL} {
-    padding: 8px;
-  }
-`;
 
 function AnimatedPages() {
   const { location } = useRouter();
@@ -36,7 +18,7 @@ function AnimatedPages() {
 
   return transitions.map(({ item, props, key }) => (
     <Page key={key}>
-      <animated.div  style={props}>
+      <animated.div style={props}>
         <Switch location={item}>
           <Route path="/" exact component={GithubForm} />
           <Route path="/profile" component={Profile} />

@@ -53,12 +53,3 @@ export const RepoContainer = styled.div`
 export const UserContainer = styled.div`
   max-height: 400px;
 `;
-
-export const Col = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  h2 {
-    margin-top: 24px;
-  }
-`;
